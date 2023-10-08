@@ -10,6 +10,6 @@ public class bumpers extends CarBodyKitDecorator{
     @Override
     public String getDescription() {
         return car.getDescription() + "\n"+
-                "Mod - Bumpers";
+                ",with SprBumpers";
     }
 }

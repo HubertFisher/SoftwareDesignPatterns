@@ -9,7 +9,7 @@ public class SideSkirts extends CarBodyKitDecorator{
 
     @Override
     public String getDescription() {
-        return car.getDescription() + "\n"+
-                "Mod - Side Skirts";
+        return car.getDescription() +
+                "with Carbon Side Skirts";
     }
 }
