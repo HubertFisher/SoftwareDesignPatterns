@@ -1,6 +1,6 @@
 package Decorators;
 
-import Application.Car;
+import Car.Car;
 
 public class SideSkirts extends CarBodyKitDecorator{
     public SideSkirts(Car car) {

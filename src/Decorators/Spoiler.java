@@ -1,6 +1,6 @@
 package Decorators;
 
-import Application.Car;
+import Car.Car;
 
 public class Spoiler extends CarBodyKitDecorator{
    public Spoiler(Car car){

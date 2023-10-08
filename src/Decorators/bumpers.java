@@ -1,6 +1,6 @@
 package Decorators;
 
-import Application.Car;
+import Car.Car;
 
 public class bumpers extends CarBodyKitDecorator{
     public bumpers(Car car) {

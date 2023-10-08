@@ -1,22 +1,24 @@
-package Application;
+package Car;
 
 import Strategies.BodyStrategies.interfaceStr.IBodyStrategy;
 import Strategies.WheelStrategies.interfaceStr.IWheelStrategy;
 import Strategies.fuelStrategies.interfaceStr.IfuelStrategy;
 
-public  class Car {
-    protected String name;
+public abstract class Car {
+    protected String brandName;
+    protected String modelName;
     private IBodyStrategy bodyStrategy;
     private IfuelStrategy fuelStrategy;
     private IWheelStrategy wheelStrategy;
 
-    public Car(String name, IBodyStrategy bodyStrategy, IfuelStrategy fuelStrategy, IWheelStrategy wheelStrategy){
-        this.name = name;
+    public Car(String modelName, IBodyStrategy bodyStrategy, IfuelStrategy fuelStrategy, IWheelStrategy wheelStrategy){
+        this.modelName = modelName;
         this.bodyStrategy = bodyStrategy;
         this.fuelStrategy = fuelStrategy;
         this.wheelStrategy = wheelStrategy;
     }
-    public Car() {}
+
+    protected Car() {}
 
     public String getWheelStrategy() {
         return wheelStrategy.WheelType();
@@ -43,7 +45,7 @@ public  class Car {
     }
 
     public  String getDescription(){
-        return name+":\n"+
+        return brandName+" "+ modelName+"\n"+
                 "Body type - "+bodyStrategy.bodyType()+"\n"+
                 "Wheel type - " + wheelStrategy.WheelType()+"\n"+
                 "Fuel type - " + fuelStrategy.fueltype()+"\n";
