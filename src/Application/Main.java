@@ -1,6 +1,4 @@
 package Application;
-
-
 import Car.BMW;
 import Car.Mercedes;
 import Strategies.BodyStrategies.SedanBodyStrategy;
