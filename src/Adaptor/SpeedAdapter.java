@@ -1,6 +1,9 @@
 package Adaptor;
 
-public class SpeedAdapter implements IAmericanSpeedSystem{
+import Adaptor.interfaces.IAmericanSpeedSystem;
+import Adaptor.interfaces.IEuropeanSpeedSystem;
+
+public class SpeedAdapter implements IAmericanSpeedSystem {
     IEuropeanSpeedSystem europeanSpeedSystem;
 
     public SpeedAdapter(IEuropeanSpeedSystem europeanSpeedSystem) {

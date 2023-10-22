@@ -1,5 +1,7 @@
 package Adaptor;
 
+import Adaptor.interfaces.IAmericanSpeedSystem;
+
 public class Main {
     public static void main(String[] args) {
         IAmericanSpeedSystem speedSystem = new SimpleAmericanSpeedChecker();
