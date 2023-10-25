@@ -2,8 +2,8 @@ package Decorators;
 
 import Car.Car;
 
-public class bumpers extends CarBodyKitDecorator{
-    public bumpers(Car car) {
+public class SprinterBumpers extends CarBodyKitDecorator{
+    public SprinterBumpers(Car car) {
         super(car);
     }
 

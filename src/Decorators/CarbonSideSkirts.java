@@ -2,8 +2,8 @@ package Decorators;
 
 import Car.Car;
 
-public class SideSkirts extends CarBodyKitDecorator{
-    public SideSkirts(Car car) {
+public class CarbonSideSkirts extends CarBodyKitDecorator{
+    public CarbonSideSkirts(Car car) {
         super(car);
     }
 
