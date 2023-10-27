@@ -1,6 +1,7 @@
 package Car;
 
 import Strategies.BodyStrategies.interfaceStr.IBodyStrategy;
+import Strategies.TransmissionStrategies.InterfaceStr.ITransmissionStrategy;
 import Strategies.WheelStrategies.interfaceStr.IWheelStrategy;
 import Strategies.fuelStrategies.interfaceStr.IfuelStrategy;
 
@@ -10,12 +11,14 @@ public abstract class Car {
     private IBodyStrategy bodyStrategy;
     private IfuelStrategy fuelStrategy;
     private IWheelStrategy wheelStrategy;
+    private ITransmissionStrategy transmissionStrategy;
 
-    public Car(String modelName, IBodyStrategy bodyStrategy, IfuelStrategy fuelStrategy, IWheelStrategy wheelStrategy){
+    public Car(String modelName, IBodyStrategy bodyStrategy, IfuelStrategy fuelStrategy, IWheelStrategy wheelStrategy, ITransmissionStrategy transmissionStrategy){
         this.modelName = modelName;
         this.bodyStrategy = bodyStrategy;
         this.fuelStrategy = fuelStrategy;
         this.wheelStrategy = wheelStrategy;
+        this.transmissionStrategy = transmissionStrategy;
     }
 
     protected Car() {}
@@ -43,12 +46,19 @@ public abstract class Car {
     public void setWheelStrategy(IWheelStrategy wheelStrategy) {
         this.wheelStrategy = wheelStrategy;
     }
+    public ITransmissionStrategy getTransmissionStrategy() {
+        return transmissionStrategy;
+    }
 
+    public void setTransmissionStrategy(ITransmissionStrategy transmissionStrategy) {
+        this.transmissionStrategy = transmissionStrategy;
+    }
     public  String getDescription(){
         return brandName+" "+ modelName+"\n"+
                 "Body type - "+bodyStrategy.bodyType()+"\n"+
                 "Wheel type - " + wheelStrategy.WheelType()+"\n"+
                 "Fuel type - " + fuelStrategy.fueltype()+"\n";
     }
+
 
 }
